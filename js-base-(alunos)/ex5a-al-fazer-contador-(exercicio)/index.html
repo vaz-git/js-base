@@ -1,1 +1,33 @@
- <!-- 1ª Digitação (Resolva aqui o exercício) -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 5 fazer contador</title>
+</head>
+<body>
+
+    <button id="btnContador">Clique </button>
+    <p id="paragrafo">Contador: 0</p>
+
+    <script>
+        let contador = 0;
+
+        const botao = document.getElementById("btnContador")
+        const paragrafo = document.getElementById("paragrafo")
+
+        botao.addEventListener("click", function() {
+            contador++;
+            paragrafo.textContent = "Contador: " + contador;
+
+            if (contador % 2 === 0) {
+                paragrafo.style.backgroundColor = "rgb(71, 255, 77)";
+            } else {
+                paragrafo.style.backgroundColor = "rgb(255, 48, 48)";
+            }
+        }) 
+
+    </script>
+</body>
+
+    
