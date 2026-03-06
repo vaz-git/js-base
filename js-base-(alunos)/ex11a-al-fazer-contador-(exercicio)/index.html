@@ -51,6 +51,39 @@
 
 
     // 1ª Digitação (Resolva aqui o exercício)
+    let tempo = 0;
+  let contador = null;
+
+  const timer = document.getElementById("timer");
+  const startButton = document.getElementById("startButton");
+  const pauseButton = document.getElementById("pauseButton");
+  const resetButton = document.getElementById("resetButton");
+
+  // Iniciar
+  startButton.addEventListener("click", function() {
+
+  if (contador !== null) return;
+
+  contador = setInterval(function() {
+    tempo++;
+    timer.textContent = tempo;
+  }, 1000);
+
+});
+
+  // Pausar
+  pauseButton.addEventListener("click", function() {
+  clearInterval(contador);
+  contador = null;
+});
+
+  // Resetar
+  resetButton.addEventListener("click", function() {
+  clearInterval(contador);
+  contador = null;
+  tempo = 0;
+  timer.textContent = tempo;
+});
 
 
   </script>

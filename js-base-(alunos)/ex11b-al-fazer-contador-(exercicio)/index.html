@@ -39,13 +39,14 @@
   </style>
 </head>
 <body>
+
   <!-- Parágrafo para exibir a citação -->
   <p id="quote">Clique no botão para gerar uma citação.</p>
 
   <!-- Botão para gerar uma nova citação -->
   <button id="newQuoteButton">Nova Citação</button>
 
-  <!-- Script JavaScript embutido na página -->
+  <!-- Script JavaScript -->
   <script>
     // Array de citações
     const quotes = [
@@ -56,9 +57,19 @@
       "Não importa o quão devagar você vá, desde que você não pare. – Confúcio"
     ];
 
-       // 1ª Digitação (Resolva aqui o exercício)
+    // pegar os elementos da página
+    const quoteText = document.getElementById("quote");
+    const button = document.getElementById("newQuoteButton");
 
+    // função que gera uma citação aleatória
+    function gerarCitacao() {
+      const indiceAleatorio = Math.floor(Math.random() * quotes.length);
+      quoteText.textContent = quotes[indiceAleatorio];
+    }
 
+    // evento de clique no botão
+    button.addEventListener("click", gerarCitacao);
   </script>
+
 </body>
 </html>
